@@ -1,5 +1,9 @@
-FROM python:3.8-alpine
+FROM python:3.6-slim-buster
 
-ADD app.py /tree/app.py
+WORKDIR /app
 
-CMD  [ "python", "/tree/app.py" ]
+ADD . .
+
+ENTRYPOINT [ "python" ]
+
+CMD  [ "app.py" ]
