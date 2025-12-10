@@ -1,0 +1,65 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+
+# Byte-compiled / optimized files
+*.py[cod]
+*$py.class
+
+# ---- Virtual environment ----
+venv/
+.env/
+env/
+.venv/
+
+# ---- Flask / App ----
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# ---- Logs ----
+*.log
+
+# ---- IDE / Editor ----
+.vscode/
+.idea/
+*.swp
+
+# ---- OS Generated ----
+.DS_Store
+Thumbs.db
+
+# ---- Docker ----
+*.pid
+*.tar
+docker-compose.override.yml
+
+# ---- Environment Variables ----
+*.env
+
+# ---- Build / Distribution ----
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ----Frontend Node Modules ----
+node_modules/
+package-lock.json
+package.json
+dist/
+build/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnp.*
+.pnp.js
+.cache/
+.next/
+out/
+.nuxt/
