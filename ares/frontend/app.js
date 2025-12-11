@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 // Route: Fetch data from Flask and show on EJS page
 app.get('/', async (req, res) => {
     try {
-        const response = await axios.get("http://172.17.0.1:8000/api");
+        const response = axios.get("http://backend:8000/api");
         const names = response.data.data;
 
         res.render('index', { names });

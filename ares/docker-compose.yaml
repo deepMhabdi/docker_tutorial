@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile-backend
+    container_name: ares-backend
+    ports:
+      - "8000:8000"
+    networks:
+      - ares-network
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile-frontend
+    container_name: ares-frontend
+    ports:
+      - "5000:3000"
+    depends_on:
+      - backend
+    networks:
+      - ares-network
+    restart: always
+
+networks:
+  ares-network:
+    driver: bridge
